@@ -1,0 +1,63 @@
+🚀 دليل النشر السريع على Streamlit Cloud
+==========================================
+
+✅ الخطوات (5-10 دقائق):
+
+1️⃣ إنشاء مستودع خاص على GitHub:
+   - اذهب إلى: https://github.com/new
+   - اسم المستودع: AI-Mental-Health-Assistant
+   - ⚠️ اختر Private (خاص) - مهم لحماية الكود!
+   - اضغط Create repository
+
+2️⃣ رفع الملفات على GitHub:
+   
+   الطريقة السهلة (GitHub Desktop):
+   - حمّل من: https://desktop.github.com/
+   - افتح → File → Add Local Repository
+   - اختر مجلد المشروع
+   - Commit → Publish
+   
+   أو باستخدام Git:
+   - في مجلد المشروع:
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/USERNAME/AI-Mental-Health-Assistant.git
+   git push -u origin main
+
+3️⃣ النشر على Streamlit Cloud:
+   - اذهب إلى: https://share.streamlit.io
+   - Sign in with GitHub
+   - New app
+   - Repository: username/AI-Mental-Health-Assistant
+   - Main file: app.py
+   - Deploy!
+
+4️⃣ إضافة الحماية (مهم جداً!):
+   - في Streamlit Cloud → Settings → Secrets
+   - أضف:
+     GEMINI_API_KEY = "مفتاحك هنا"
+     APP_PASSWORD = "كلمة_المرور_القوية"
+   - Save
+
+5️⃣ جاهز! 🔒
+   - ستحصل على رابط مثل:
+   https://ai-mental-health-assistant.streamlit.app
+   
+   ⚠️ الحماية:
+   - ✅ التطبيق محمي بكلمة مرور
+   - ✅ المستودع خاص على GitHub
+   - ✅ شارك الرابط وكلمة المرور فقط مع من تثق بهم!
+
+==========================================
+
+⚠️ ملاحظات مهمة:
+- لا ترفع ملف .env على GitHub
+- استخدم Streamlit Secrets لإضافة مفتاح API
+- تأكد من وجود .gitignore لحماية الملفات
+
+==========================================
+
+📖 للمزيد من التفاصيل: اقرأ DEPLOYMENT_GUIDE.md
+
+==========================================

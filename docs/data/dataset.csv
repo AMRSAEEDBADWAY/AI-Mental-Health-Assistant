@@ -1,0 +1,41 @@
+text,emotion,dialect
+أنا قلقان قوي من الامتحانات,anxiety,egyptian
+حاسس إن قلبي مش مطمن,anxiety,egyptian
+خايف من المستقبل اوي,anxiety,egyptian
+متوتر قبل البريزنتيشن,anxiety,egyptian
+قلقان على صحة أهلي,anxiety,egyptian
+أنا زهقان من كل حاجة,depression,egyptian
+مش لاقي معنى لحياتي,depression,egyptian
+تعبان نفسياً اوي,depression,egyptian
+حاسس إني وحيد,depression,egyptian
+مش عايز أعمل أي حاجة,depression,egyptian
+الشغل كتير قوي ومش قادر,stress,egyptian
+مضغوط من كل الجهات,stress,egyptian
+الضغط زاد عليا اوي,stress,egyptian
+مش لاحق على أي حاجة,stress,egyptian
+حاسس إني هنهار من الضغط,stress,egyptian
+الحمد لله أنا كويس,happiness,egyptian
+النهارده يوم جميل,happiness,egyptian
+مبسوط اوي,happiness,egyptian
+فرحان بإنجازاتي,happiness,egyptian
+حاسس بطاقة إيجابية,happiness,egyptian
+عادي مفيش جديد,neutral,egyptian
+يومي عادي كده,neutral,egyptian
+ماشي الحال,neutral,egyptian
+مش حاسس بحاجة معينة,neutral,egyptian
+طبيعي زي أي يوم,neutral,egyptian
+قلق شديد يمنعني من النوم,anxiety,standard
+أشعر بالخوف المستمر,anxiety,standard
+قلبي ينبض بسرعة,anxiety,standard
+حزين جداً ولا أجد حلاً,depression,standard
+فقدت الشغف بكل شيء,depression,standard
+أشعر بالعجز التام,depression,standard
+ضغط العمل لا يحتمل,stress,standard
+مرهق جسدياً ونفسياً,stress,standard
+لا أستطيع التركيز من الضغط,stress,standard
+سعيد وممتن,happiness,standard
+يوم رائع حقاً,happiness,standard
+أشعر بالرضا والسلام,happiness,standard
+يوم عادي,neutral,standard
+لا جديد,neutral,standard
+كل شيء على ما يرام,neutral,standard

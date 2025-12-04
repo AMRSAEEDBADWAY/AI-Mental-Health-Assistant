@@ -1,0 +1,88 @@
+# ========================================
+# AI Mental Health Assistant - Configuration
+# ========================================
+
+## نماذج التحليل (Emotion Detection Models)
+
+### النموذج الرئيسي:
+EMOTION_MODEL = "CAMeL-Lab/bert-base-arabic-camelbert-msa-sentiment"
+
+### بدائل (في حالة عدم توفر النموذج الرئيسي):
+# EMOTION_MODEL = "UBC-NLP/MARBERT"
+# EMOTION_MODEL = "aubmindlab/bert-base-arabertv02"
+# EMOTION_MODEL = "asafaya/bert-base-arabic"
+
+## نماذج توليد الردود (Response Generation Models)
+
+### النموذج الرئيسي:
+RESPONSE_MODEL = "aubmindlab/aragpt2-base"
+
+### بدائل:
+# RESPONSE_MODEL = "aubmindlab/aragpt2-medium"
+# RESPONSE_MODEL = "UBC-NLP/AraT5-base"
+# RESPONSE_MODEL = "bigscience/bloom-560m" (مع دعم عربي محدود)
+
+## إعدادات عامة
+
+MAX_INPUT_LENGTH = 512
+MAX_OUTPUT_LENGTH = 150
+TEMPERATURE = 0.7
+TOP_P = 0.9
+TOP_K = 50
+
+## إعدادات الـ Pipeline
+
+DEVICE = -1  # -1 for CPU, 0 for GPU
+BATCH_SIZE = 1
+USE_CACHE = True
+
+## فئات المشاعر المدعومة
+
+SUPPORTED_EMOTIONS = [
+    "anxiety",      # قلق
+    "depression",   # اكتئاب
+    "stress",       # ضغط نفسي
+    "happiness",    # سعادة
+    "neutral"       # طبيعي
+]
+
+## حد أدنى لطول النص
+MIN_TEXT_LENGTH = 3
+
+## حد أقصى لسجل المحادثات
+MAX_HISTORY_LENGTH = 50
+
+## ملاحظات:
+# - النماذج يتم تحميلها تلقائياً من HuggingFace
+# - يمكن تغيير النموذج في أي وقت
+# - للاستخدام Offline: قم بتحميل النماذج مسبقاً
+# - استخدم GPU لتسريع المعالجة (ضع DEVICE = 0)
+
+## طريقة تحميل النماذج للاستخدام Offline:
+
+"""
+from transformers import AutoTokenizer, AutoModel
+
+# تحميل نموذج التحليل
+tokenizer = AutoTokenizer.from_pretrained("CAMeL-Lab/bert-base-arabic-camelbert-msa-sentiment")
+model = AutoModel.from_pretrained("CAMeL-Lab/bert-base-arabic-camelbert-msa-sentiment")
+
+# حفظ محلياً
+tokenizer.save_pretrained("./models/emotion_model")
+model.save_pretrained("./models/emotion_model")
+
+# للاستخدام:
+# EMOTION_MODEL = "./models/emotion_model"
+"""
+
+## روابط النماذج الكاملة:
+
+# MARBERT: https://huggingface.co/UBC-NLP/MARBERT
+# CAMeLBERT: https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-msa
+# AraGPT2: https://huggingface.co/aubmindlab/aragpt2-base
+# AraT5: https://huggingface.co/UBC-NLP/AraT5-base
+
+## ملاحظات الأمان:
+# - لا تشارك API Keys في هذا الملف
+# - استخدم متغيرات البيئة للمعلومات الحساسة
+# - راجع سياسات الاستخدام لكل نموذج

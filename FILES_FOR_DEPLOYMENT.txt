@@ -1,0 +1,33 @@
+📦 الملفات المطلوبة للنشر على Streamlit Cloud:
+
+✅ ملفات ضرورية:
+- app.py (الملف الرئيسي)
+- requirements.txt (المكتبات المطلوبة)
+- .streamlit/config.toml (إعدادات Streamlit)
+- README.md (الوثائق)
+
+✅ ملفات الكود:
+- emotion_model.py
+- response_generator.py
+- mood_tracker.py
+- therapy_exercises.py
+- ui_components.py
+- resources_library.py
+- config.py
+
+✅ مجلدات:
+- utils/ (text_cleaner.py)
+- data/ (سيتم إنشاؤها تلقائياً)
+
+❌ ملفات غير ضرورية (لن تُرفع):
+- .env (استخدم Streamlit Secrets بدلاً منه)
+- venv/ (البيئة الافتراضية)
+- __pycache__/ (ملفات Python المؤقتة)
+- *.pyc (ملفات Python المترجمة)
+
+📝 ملاحظة:
+- تأكد من وجود .gitignore لحماية الملفات الحساسة
+- أضف GEMINI_API_KEY في Streamlit Secrets
+- تأكد من أن جميع المسارات نسبية (relative paths)
+
+🚀 جاهز للنشر!
